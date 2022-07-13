@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<!--<meta name="viewport" content="width=device-width, initial-scale=1" />-->
+<meta name="viewport" content="user-scalable=no">
+<title>時間簿</title>
+<link rel='icon' type='image/png' href='/www/image/favicon.png' >
+<style type="text/css">
+.dark { background-color: #191970; color:#eeeeee; display: table; width: 100%; height: 100%; }
+.light { background-color: #c6d5ff7e; color:#222222; display: table; width: 100%; height: 100%; }
+#container { 
+    display: grid; 
+    grid-template-rows: 10vh 25vh 65vh repeat(36, 100vh);
+    grid-template-columns: 30% 1fr 30%; 
+}
+#header {grid-row: 1 / 2; grid-column: 1 / 4; }
+#header2 {grid-row: 2/ 3; grid-column: 2 / 3; }
+#left {grid-row: 3/36; grid-column: 1/2}
+#center {grid-row: 3/4; grid-column: 2/3;}
+#right {grid-row: 3/36; grid-column: 3/4;}
+.box { display: table; width: 100%; height: 100%; margin: 0; border-width: 0; padding: 0;}
+.cell { display: table-cell; text-align: center; vertical-align: middle; margin: 0; border-width: 0; padding: 0 10pt;}
+.upp { display: table-cell; text-align: center; margin: 0; border-width: 0; padding: 0 10pt;}
+img { max-width: 256px; height: auto; object-fit: contain; }
+html { font-size: 100%; }
+</style>
+</head>
+<body id="body">
+    <div id="container">
+		<div class="box"  id="header"><div class="cell"  style="background-color: #191970; color:#eeeeee; "><h3>｢時間の使い方のクセをチェック｣フローチャート</h3></div></div>
+        <div class="box" id="top"></div>
+		<div class="box"  id="header2">
+            <div class="cell">
+                <!--<p>
+                    時間を電車が一本のレールを走っているように直線だと思っていませんか? ハイウエイのように、何車線も走ってるのをイメージしてください。
+                    途中、工事・事故があり、渋滞、車線変更、雨、風、・・・。わたしたちの一日もこのように流れています。
+                </p>-->
+                <p>
+                    忙しい、時間がない、あれもやんなきゃ、これもやんなきゃ・・と、時間の奴隷になっていませんか?
+                    時間の使い方は、人それぞれ違います。
+                    そして、ひとりひとり時間の使い方にクセがあります。クセに気づけば、時間をもっとうまく使えるようになります。
+                    チャートで診断して、あらかわ菜美がワンポイントアドバイスします。
+                </p>
+            </div>
+        </div>
+        <div class="box"></div>
+        <div class="box"  id="left" >
+            <div class="upp"   style="background-color:#c6d5ff7e">
+                <!--<p>
+                    忙しい、時間がない、あれもやんなきゃ、これもやんなきゃ・・と、時間の奴隷になっていませんか?
+                    時間の使い方は、人それぞれ違います。
+                    そして、ひとりひとり時間の使い方にクセがあります。クセに気づけば、時間をもっとうまく使えるようになります。
+                    チャートで診断して、あらかわ菜美がワンポイントアドバイスします。
+                </p>-->
+            </div>
+        </div>
+        <div class="box"  id="center">
+            <div class="cell" >
+                <img src="img_chart/sw-chart.gif">
+                <p><a href="#start">開始</a></p>
+            </div>
+        </div>
+        <div class="box"  id="right">
+            <div class="upp"   style="background-color:#c6d5ff7e">
+                <!--<p>
+                    3万人の時間の使い方を分析して「クセ」をタイプごとにまとめてできたのがこのチャート。
+                    ビジネスワーカー、主婦、学生に対応できるように、できるだけ共通したことばを使っています。
+                    多くの雑誌、メデイアで紹介されました。
+                </p>-->
+            </div>
+        </div>
+        <div class="box"  id=start>
+            <div class="cell" >
+                <p>やりたいことがあるけど時間が作れない?</p>
+                <img src="img_chart/sw-chart.gif">
+                <p><a href="#sec02">はい</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#sec04">いいえ</a></p>
+                <p><a href="#top">最初に戻る</a></p>
+            </div>
+        </div>
+        <div class="box"  id=sec02>
+            <div class="cell" >
+                <p>夫(妻)が家にいる時間は出かけにくい?</p>
+                <img src="img_chart/sw-chart.gif">
+                <p><a href="#sec05">はい</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#sec03">いいえ</a></p>
+                <p><a href="#top">最初に戻る</a></p>
+            </div>
+        </div>
+        <div class="box"  id=sec03>
+            <div class="cell" >
+                <p>時間があれば、身体を休めてのんびりしたい?</p>
+                <img src="img_chart/sw-chart.gif">
+                <p><a href="#sec06">はい</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#sec07">いいえ</a></p>
+                <p><a href="#top">最初に戻る</a></p>
+            </div>
+        </div>
+        <div class="box"  id=sec04>
+            <div class="cell" >
+                <p>自分はよく出かける方?</p>
+                <img src="img_chart/sw-chart.gif">
+                <p><a href="#sec08">はい</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#sec05">いいえ</a></p>
+                <p><a href="#top">最初に戻る</a></p>
+            </div>
+        </div>
+        <div class="box"  id=sec05>
+            <div class="cell" >
+                <p>新聞にはゆっくり目を通す?</p>
+                <img src="img_chart/sw-chart.gif">
+                <p><a href="#sec06">はい</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#sec09">いいえ</a></p>
+                <p><a href="#top">最初に戻る</a></p>
+            </div>
+        </div>
+        <div class="box"  id=sec06>
+            <div class="cell" >
+                <p>いつも片付けが気になっている?</p>
+                <img src="img_chart/sw-chart.gif">
+                <p><a href="#sec11">はい</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#sec07">いいえ</a></p>
+                <p><a href="#top">最初に戻る</a></p>
+            </div>
+        </div>
+        <div class="box"  id=sec07>
+            <div class="cell" >
+                <p>時間ができたときに、何をしていいかわからない?</p>
+                <img src="img_chart/sw-chart.gif">
+                <p><a href="#sec12">はい</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#sec11">いいえ</a></p>
+                <p><a href="#top">最初に戻る</a></p>
+            </div>
+        </div>
+        <div class="box"  id=sec08>
+            <div class="cell" >
+                <p>夫(妻)に手伝ってといえる?</p>
+                <img src="img_chart/sw-chart.gif">
+                <p><a href="#sec13">はい</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#sec14">いいえ</a></p>
+                <p><a href="#top">最初に戻る</a></p>
+            </div>
+        </div>
+        <div class="box"  id=sec09>
+            <div class="cell" >
+                <p>家族のため、仕事のためだけの人生は送りたくない?</p>
+                <img src="img_chart/sw-chart.gif">
+                <p><a href="#sec08">はい</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#sec15">いいえ</a></p>
+                <p><a href="#top">最初に戻る</a></p>
+            </div>
+        </div>
+        <div class="box"  id=sec10>
+            <div class="cell" >
+                <p>時間ができたら自分のしたいことをする?</p>
+                <img src="img_chart/sw-chart.gif">
+                <p><a href="#sec09">はい</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#sec16">いいえ</a></p>
+                <p><a href="#top">最初に戻る</a></p>
+            </div>
+        </div>
+        <div class="box"  id=sec11>
+            <div class="cell" >
+                <p>時間が空いたらとりあえず、家のこと、気になっていることをする?</p>
+                <img src="img_chart/sw-chart.gif">
+                <p><a href="#sec17">はい</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#sec10">いいえ</a></p>
+                <p><a href="#top">最初に戻る</a></p>
+            </div>
+        </div>
+        <div class="box"  id=sec12>
+            <div class="cell" >
+                <p>やることがあっても、「後でいいか」と思う。頭がそのことにいかない?</p>
+                <img src="img_chart/sw-chart.gif">
+                <p><a href="#sec18">はい</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#sec11">いいえ</a></p>
+                <p><a href="#top">最初に戻る</a></p>
+            </div>
+        </div>
+        <div class="box"  id=sec13>
+            <div class="cell" >
+                <p>サークル活動、ボランティア、習い事のいずれかをしている?</p>
+                <img src="img_chart/sw-chart.gif">
+                <p><a href="#sec19">はい</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#sec20">いいえ</a></p>
+                <p><a href="#top">最初に戻る</a></p>
+            </div>
+        </div>
+        <div class="box"  id=sec14>
+            <div class="cell" >
+                <p>息抜きのために友人と食事や旅行にいくことがある?</p>
+                <img src="img_chart/sw-chart.gif">
+                <p><a href="#sec13">はい</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#sec15">いいえ</a></p>
+                <p><a href="#top">最初に戻る</a></p>
+            </div>
+        </div>
+        <div class="box"  id=sec15>
+            <div class="cell" >
+                <p>手抜き料理は気がひける?</p>
+                <img src="img_chart/sw-chart.gif">
+                <p><a href="#sec22">はい</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#sec20">いいえ</a></p>
+                <p><a href="#top">最初に戻る</a></p>
+            </div>
+        </div>
+        <div class="box"  id=sec16>
+            <div class="cell" >
+                <p>仕事、介護、育児のいずれかをしている?</p>
+                <img src="img_chart/sw-chart.gif">
+                <p><a href="#sec23">はい</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#sec15">いいえ</a></p>
+                <p><a href="#top">最初に戻る</a></p>
+            </div>
+        </div>
+        <div class="box"  id=sec17>
+            <div class="cell" >
+                <p>友人と会ったりするより、家でゴロゴロしていたい?</p>
+                <img src="img_chart/sw-chart.gif">
+                <p><a href="#sec24">はい</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#sec16">いいえ</a></p>
+                <p><a href="#top">最初に戻る</a></p>
+            </div>
+        </div>
+        <div class="box"  id=sec18>
+            <div class="cell" >
+                <p>ついつい、スマホやテレビをみて時間をつぶしている?</p>
+                <img src="img_chart/sw-chart.gif">
+                <p><a href="#sec24">はい</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#sec17">いいえ</a></p>
+                <p><a href="#top">最初に戻る</a></p>
+            </div>
+        </div>
+        <div class="box"  id=sec18>
+            <div class="cell" >
+                <p>ついつい、スマホやテレビをみて時間をつぶしている?</p>
+                <img src="img_chart/sw-chart.gif">
+                <p><a href="#sec24">はい</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#sec17">いいえ</a></p>
+                <p><a href="#top">最初に戻る</a></p>
+            </div>
+        </div>
+        <div class="box"  id=sec19>
+            <div class="cell" >
+                <p>立ち話で話し込んだり、長電話をしてしまう?</p>
+                <img src="img_chart/sw-chart.gif">
+                <p><a href="#secA">はい</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#sec20">いいえ</a></p>
+                <p><a href="#top">最初に戻る</a></p>
+            </div>
+        </div>
+        <div class="box"  id=sec20>
+            <div class="cell" >
+                <p>自分のやりたいことを優先して食事の時間が遅れることがある?</p>
+                <img src="img_chart/sw-chart.gif">
+                <p><a href="#secC">はい</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#secB">いいえ</a></p>
+                <p><a href="#top">最初に戻る</a></p>
+            </div>
+        </div>
+        <div class="box"  id=sec21>
+            <div class="cell" >
+                <p>頼まれるとイヤと言えない?</p>
+                <img src="img_chart/sw-chart.gif">
+                <p><a href="#secD">はい</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#sec20">いいえ</a></p>
+                <p><a href="#top">最初に戻る</a></p>
+            </div>
+        </div>
+        <div class="box"  id=sec22>
+            <div class="cell" >
+                <p>自分の気にいったように料理を盛り付けたり、デザインに仕上げないと気がすまない?</p>
+                <img src="img_chart/sw-chart.gif">
+                <p><a href="#secE">はい</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#sec21">いいえ</a></p>
+                <p><a href="#top">最初に戻る</a></p>
+            </div>
+        </div>
+        <div class="box"  id=sec23>
+            <div class="cell" >
+                <p>ちょっとの時間でも、時間をムダにしたくない?</p>
+                <img src="img_chart/sw-chart.gif">
+                <p><a href="#secF">はい</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#sec22">いいえ</a></p>
+                <p><a href="#top">最初に戻る</a></p>
+            </div>
+        </div>
+        <div class="box"  id=sec24>
+            <div class="cell" >
+                <p>通販のカタログを見たり、ショップチャンネルを見るが好き?</p>
+                <img src="img_chart/sw-chart.gif">
+                <p><a href="#secG">はい</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#sec23">いいえ</a></p>
+                <p><a href="#top">最初に戻る</a></p>
+            </div>
+        </div>
+        <div class="box"  id=secA>
+            <div class="cell" >
+                <h2>流されタイプ</h2>
+                <p>
+                    自分のしたいこと、今日のやることがはっきりしています。時間の使い方も下手ではないのですが、ついつい、おしゃべりに流されたり周りに流されてしまいます。
+                    通販のカタログを見たり、ショップチャンネルを見るが好き?
+                </p>
+                <p>
+                    【改善のヒント】
+                    <br>
+                    人が好き、話好きは悪いことではありませんが、たまには断る勇気も大切です。
+                    このタイプは時間の使い方が器用なため、「忙しい」とか「時間がない」ことがあまり周囲にはわかりにくいので、
+                    割り込まれる原因なので、その日や、その週の状況を周囲に前もってアピールしておくと効果的です。
+                </p>
+                <p><a href="#top">最初に戻る</a></p>
+            </div>
+        </div>
+        <div class="box"  id=secB>
+            <div class="cell" >
+                <h2>他者優先タイプ</h2>
+                <p>
+                    自分がしたいことがあっても、子どもや夫のことを優先するあまり、自分のことがなかなかできません。
+                    自分のことをやると罪悪感を抱く人もいます。他者優先タイプはみんなのため、組織のためにと、自分のやることが後回しになります。
+                </p>
+                <p>
+                    【改善のヒント】
+                    <br>
+                    まず、自分がこれをしたいという思いが強くないのもこのタイプの特徴です。
+                    自分が何がしたいのか、自分にとって何が生きがいか、他に目を向けて自分のしたいことに時間を使ってみると、もっと達成感、充実感を得られるでしょう。
+                </p>
+                <p><a href="#top">最初に戻る</a></p>
+            </div>
+        </div>
+        <div class="box"  id=secC>
+            <div class="cell" >
+                <h2>マイペースタイプ</h2>
+                <p>
+                    周囲のことより、自分のしたいことを優先して行動します。家族がおなかを空かしていても、「ちょっと待って、すぐ終わるから」と言って、相手を待たせてしまいます。
+                </p>
+                <p>
+                    【改善のヒント】
+                    <br>
+                    一緒に仕事をしているメンバーやクライアント、家族の決まっているスケジュールを手帳やカレンダーに書き込んで、それと照らし合わせて自分のスケジュールを組み立ててみましよう。
+                    相手の都合に合わせたベストな順番に変えてみると、かえって自分のしたいことができます。
+                </p>
+                <p><a href="#top">最初に戻る</a></p>
+            </div>
+        </div>
+        <div class="box"  id=secD>
+            <div class="cell" >
+                <h2>振り回されタイプ</h2>
+                <p>
+                    周りから声をかけられたり、頼まれると、やりかけていることがあっても断れないので中断したままになります。
+                    周りに振り回されて自分のことができない状況を作ります。
+                </p>
+                <p>
+                    【改善のヒント】
+                    <br>
+                    周囲に振り回されないために、ひとりで集中する場所と時間をつくります。
+                    長い時間でなくてもいいので、家やオフィスの近くのカフエ、電車の中など。本日やることにどれだけの時間が必要か、ひとつひとつ細かく書き出して、それぞれに時間をつけてみます。
+                    「資料整理30分」「来週のプレゼンのための調べ物をする60分」「メールの返信30分」など。
+                </p>
+                <p><a href="#top">最初に戻る</a></p>
+            </div>
+        </div>
+        <div class="box"  id=secE>
+            <div class="cell" >
+                <h2>こだわりタイプ</h2>
+                <p>
+                    ひとつのことにこだわりすぎて、他のことに切り替えができません。
+                    料理にしても、趣味にしても、色や形にとことんこだわり、自分が納得しないと気がすまないのでなかなか先に進めません。
+                </p>
+                <p>
+                    【改善のヒント】
+                    <br>
+                    没頭すると時間の経つのもわからなくなるため、作業にかかる時間を見積もって2時間なら2時間＋こだわり時間30分を大目にみて、
+                    〇〇2時間30分と手帳に記入しておきます。
+                    そして、後に、絶対に遅れてはいけない固いアポイント(会議、幼稚園の迎え)を入れて、ズルズル長引かせられないようにします。
+                </p>
+                <p><a href="#top">最初に戻る</a></p>
+            </div>
+        </div>
+        <div class="box"  id=secF>
+            <div class="cell" >
+                <h2>追われタイプ</h2>
+                <p>
+                    あれもこれもと予定を立てて、頭がくるくる回り気持ちにないので時間に追われてしまいます。
+                    中には、介護や育児などで本当に忙しくて時間に追われている人もいます。
+                </p>
+                <p>
+                    【改善のヒント】
+                    <br>
+                    このタイプは予定を入れない曜日を決めます。一週間の真ん中にあたる水曜日を特別な日にする。、予定を入れない、ノー残業デーにする、フリーの日にする。
+                    水曜日があると、何かあったときに用事を振り替えたり、休息をしたり、雑用をしたり、いわば一時避難場所として効果があります。
+                </p>
+                <p><a href="#top">最初に戻る</a></p>
+            </div>
+        </div>
+        <div class="box"  id=secG>
+            <div class="cell" >
+                <h2>先延ばしタイプ</h2>
+                <p>
+                    やることがあっても、「まあ、明日でいいか」とか、頭がそこに向かなかったりで、ついつい先延ばしにしてしまいます。
+                </p>
+                <p>
+                    【改善のヒント】
+                    <br>
+                    先送りするのは、性格的なものだと思うので、無理して変えようとすると、かえって面倒くさい状況をつくることになります。このタイプは「ひとつだけやる」を目標にします。
+                    ひとつだけでもやる習慣がつくと、それが軸になります。
+                    たとえば、メールの返信を朝の〇時にする、それだけで、時間を意識するようになります。
+                </p>
+                <p><a href="#top">最初に戻る</a></p>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>

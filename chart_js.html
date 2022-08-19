@@ -1,0 +1,148 @@
+
+<script>
+    var state = '0';
+    const state_1_question = "やりたいことがあるけど時間が作れない?";
+    const state_2_question = "夫(妻)が家にいる時間は出かけにくい?";
+    const state_3_question = "時間があれば、身体を休めてのんびりしたい?";
+    const state_4_question = "自分はよく出かける方?";
+    const state_5_question = "新聞にはゆっくり目を通す?";
+    const state_6_question = "いつも片付けが気になっている?";
+    const state_7_question = "時間ができたときに、何をしていいかわからない?";
+    const state_8_question = "夫(妻)に手伝ってといえる?";
+    const state_9_question = "家族のため、仕事のためだけの人生は送りたくない?";
+    const state_10_question = "時間ができたら自分のしたいことをする?";
+    const state_11_question = "時間が空いたらとりあえず、家のこと、気になっていることをする?";
+    const state_12_question = "やることがあっても、「後でいいか」と思う。頭がそのことにいかない?";
+    const state_13_question = "サークル活動、ボランティア、習い事のいずれかをしている?";
+    const state_14_question = "息抜きのために友人と食事や旅行にいくことがある?";
+    const state_15_question = "手抜き料理は気がひける?";
+    const state_16_question = "仕事、介護、育児のいずれかをしている?";
+    const state_17_question = "友人と会ったりするより、家でゴロゴロしていたい?";
+    const state_18_question = "ついつい、スマホやテレビをみて時間をつぶしている?";
+    const state_19_question = "立ち話で話し込んだり、長電話をしてしまう?";
+    const state_20_question = "自分のやりたいことを優先して食事の時間が遅れることがある?";
+    const state_21_question = "頼まれるとイヤと言えない?";
+    const state_22_question = "自分の気にいったように料理を盛り付けたり、デザインに仕上げないと気がすまない?";
+    const state_23_question = "ちょっとの時間でも、時間をムダにしたくない?";
+    const state_24_question = "通販のカタログを見たり、ショップチャンネルを見るが好き?";
+    const state_A_type = "流されタイプ";
+    const state_A_message = "自分のしたいこと、今日のやることがはっきりしています。時間の使い方も下手ではないのですが、ついつい、おしゃべりに流されたり周りに流されてしまいます。";
+    const state_A_hint = "【改善のヒント】<br>人が好き、話好きは悪いことではありませんが、たまには断る勇気も大切です。このタイプは時間の使い方が器用なため、「忙しい」とか「時間がない」ことがあまり周囲にはわかりにくいので、割り込まれる原因なので、その日や、その週の状況を周囲に前もってアピールしておくと効果的です。";
+    const state_B_type = "家族・他者優先タイプ";
+    const state_B_message ="自分がしたいことがあっても、子どもや夫のことを優先するあまり、自分のことがなかなかできません。自分のことをやると罪悪感を抱く人もいます。他者優先タイプはみんなのため、組織のためにと、自分のやることが後回しになります。";
+    const state_B_hint = "【改善のヒント】<br>まず、自分がこれをしたいという思いが強くないのもこのタイプの特徴です。自分が何がしたいのか、自分にとって何が生きがいか、他に目を向けて自分のしたいことに時間を使ってみると、もっと達成感、充実感を得られるでしょう。";
+    const state_C_type = "マイペースタイプ";
+    const state_C_message = "周囲のことより、自分のしたいことを優先して行動します。家族がおなかを空かしていても、「ちょっと待って、すぐ終わるから」と言って、相手を待たせてしまいます。";
+    const state_C_hint = "【改善のヒント】<br>一緒に仕事をしているメンバーやクライアント、家族の決まっているスケジュールを手帳やカレンダーに書き込んで、それと照らし合わせて自分のスケジュールを組み立ててみましよう。相手の都合に合わせたベストな順番に変えてみると、かえって自分のしたいことができます。";
+    const state_D_type = "振り回されタイプ";
+    const state_D_message = "周りから声をかけられたり、頼まれると、やりかけていることがあっても断れないので中断したままになります。周りに振り回されて自分のことができない状況を作ります。";
+    const state_D_hint = "【改善のヒント】<br>周囲に振り回されないために、ひとりで集中する場所と時間をつくります。長い時間でなくてもいいので、家やオフィスの近くのカフエ、電車の中など。本日やることにどれだけの時間が必要か、ひとつひとつ細かく書き出して、それぞれに時間をつけてみます。 「資料整理30分」「来週のプレゼンのための調べ物をする60分」「メールの返信30分」など。";
+    const state_E_type = "こだわりタイプ";
+    const state_E_message = "ひとつのことにこだわりすぎて、他のことに切り替えができません。料理にしても、趣味にしても、色や形にとことんこだわり、自分が納得しないと気がすまないのでなかなか先に進めません。";
+    const state_E_hint = "【改善のヒント】<br>没頭すると時間の経つのもわからなくなるため、作業にかかる時間を見積もって2時間なら2時間＋こだわり時間30分を大目にみて、〇〇2時間30分と手帳に記入しておきます。そして、後に、絶対に遅れてはいけない固いアポイント(会議、幼稚園の迎え)を入れて、ズルズル長引かせられないようにします。";
+    const state_F_type = "追われタイプ";
+    const state_F_message = "あれもこれもと予定を立てて、頭がくるくる回り気持ちにないので時間に追われてしまいます。中には、介護や育児などで本当に忙しくて時間に追われている人もいます。";
+    const state_F_hint = "【改善のヒント】<br>このタイプは予定を入れない曜日を決めます。一週間の真ん中にあたる水曜日を特別な日にする。、予定を入れない、ノー残業デーにする、フリーの日にする。水曜日があると、何かあったときに用事を振り替えたり、休息をしたり、雑用をしたり、いわば一時避難場所として効果があります。";
+    const state_G_type = "先延ばしタイプ";
+    const state_G_message = "やることがあっても、「まあ、明日でいいか」とか、頭がそこに向かなかったりで、ついつい先延ばしにしてしまいます。";
+    const state_G_hint = "【改善のヒント】<br>先送りするのは、性格的なものだと思うので、無理して変えようとすると、かえって面倒くさい状況をつくることになります。このタイプは「ひとつだけやる」を目標にします。ひとつだけでもやる習慣がつくと、それが軸になります。たとえば、メールの返信を朝の〇時にする、それだけで、時間を意識するようになります。";
+
+    function trans(num) {
+        state = num;
+        if (num<'A') {
+            question.innerHTML = eval("state_"+num+"_question");
+        } else {
+            type.innerHTML = eval("state_"+num+"_type");
+            message.innerHTML = eval("state_"+num+"_message");
+            hint.innerHTML = eval("state_"+num+"_hint");
+            question.innerHTML = "";
+            yesno_button.innerHTML = "";
+        }
+    }
+    function click_start() {
+      message.innerHTML = "";
+      trans('1')
+      start_button.innerHTML = "";
+      yesno_button.innerHTML = "<button onclick='click_yes()'>はい</button>&nbsp;&nbsp;<button onclick='click_no()'>いいえ</button>";
+      return_button.innerHTML = "<button onclick='click_return()'>最初に戻る</button>";
+    }
+    function click_yes() {
+      switch (state) {
+        case '1': trans('2'); break;
+        case '2': trans('5'); break;
+        case '3': trans('6'); break;
+        case '4': trans('8'); break;
+        case '5': trans('6'); break;
+        case '6': trans('11'); break;
+        case '7': trans('12'); break;
+        case '8': trans('13'); break;
+        case '9': trans('8'); break;
+        case '10': trans('9'); break;
+        case '11': trans('17'); break;
+        case '12': trans('18'); break;
+        case '13': trans('19'); break;
+        case '14': trans('13'); break;
+        case '15': trans('22'); break;
+        case '16': trans('23'); break;
+        case '17': trans('24'); break;
+        case '18': trans('24'); break;
+        case '19': trans('A'); break;
+        case '20': trans('C'); break;
+        case '21': trans('D'); break;
+        case '22': trans('E'); break;
+        case '23': trans('F'); break;
+        case '24': trans('G'); break;
+      };
+    }
+    function click_no() {
+      switch (state) {
+        case '1': trans('4'); break;
+        case '2': trans('3'); break;
+        case '3': trans('7'); break;
+        case '4': trans('5'); break;
+        case '5': trans('9'); break;
+        case '6': trans('7'); break;
+        case '7': trans('11'); break;
+        case '8': trans('14'); break;
+        case '9': trans('15'); break;
+        case '10': trans('16'); break;
+        case '11': trans('10'); break;
+        case '12': trans('11'); break;
+        case '13': trans('20'); break;
+        case '14': trans('15'); break;
+        case '15': trans('20'); break;
+        case '16': trans('15'); break;
+        case '17': trans('16'); break;
+        case '18': trans('17'); break;
+        case '19': trans('20'); break;
+        case '20': trans('B'); break;
+        case '21': trans('20'); break;
+        case '22': trans('21'); break;
+        case '23': trans('22'); break;
+        case '24': trans('23'); break;
+      };
+    }
+    function click_return() {
+      type.innerHTML = "";
+      message.innerHTML = "忙しい、時間がない、あれもやんなきゃ、これもやんなきゃ・・と、時間の奴隷になっていませんか?   時間の使い方は、人それぞれ違います。そして、ひとりひとり時間の使い方にクセがあります。クセに気づけば、時間をもっとうまく使えるようになります。チャートで診断して、あらかわ菜美がワンポイントアドバイスします。";
+      hint.innerHTML = "";
+      question.innerHTML = "";
+      start_button.innerHTML = "<button onclick='click_start()'>開始</button>";
+      yesno_button.innerHTML = "";
+      return_button.innerHTML = "";
+      state = '0';
+    }
+</script>
+<style>
+button { font-weight: bold; } 
+h2, div {margin: 1rem 5rem; text-align:center; }
+</style>
+
+<h2 style="background-color: #191970; color:#eeeeee; padding: 1rem 0;">｢時間の使い方のクセをチェック｣フローチャート</h2>
+<h3><div id="type" style="background-color: #e6e6fa"></div></h3>
+<h5><div id="message">忙しい、時間がない、あれもやんなきゃ、これもやんなきゃ・・と、時間の奴隷になっていませんか?   時間の使い方は、人それぞれ違います。そして、ひとりひとり時間の使い方にクセがあります。クセに気づけば、時間をもっとうまく使えるようになります。チャートで診断して、あらかわ菜美がワンポイントアドバイスします。</div></h5>
+<h5 ><div id="hint"></div></h5>
+<h3><div id="question" style="background-color: #fff8dc"></div></h3>
+<p><div id="start_button" ><button onclick="click_start()">開始</button></div></p>
+<p><div id="yesno_button"></div></p>
+<p><div id="return_button"></div></p>
